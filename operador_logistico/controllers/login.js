@@ -12,9 +12,7 @@ const controller = {
 
         response = await axios(config);
 
-        console.log(response.headers["x-authorization-token"]);
-
-        res.redirect('/');
+        res.json(response.headers["x-authorization-token"]);
     }
 }
 
