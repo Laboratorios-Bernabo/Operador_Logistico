@@ -19,12 +19,25 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+const jwt = require('./config/jwt');
+
+app.use(jwt());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth',authRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+//Customized 401. Recommended to add a log here.
+app.use(function (err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+     return res.status(401).send('The token is invalid.');
+  }
+  next();
 });
 
 // error handler
