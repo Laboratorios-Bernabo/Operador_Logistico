@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laboratorios Bernabo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+  </head>
+  <body>
+    
+    <img class="img-fluid" src="/images/desa.png">
+    <h1>Manual de APIs</h1>
+    <p>Documentación de APIs</p>
+     <!--Accordion wrapper-->
+  <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Inicio
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <p class="card-text">Bienvenidos a la documentación de APIs de Laboratorios Bernabó. El desarrollo de dichas APIs son compatibles con el <a href="https://tools.ietf.org/html/rfc7519">RFC7519</a>.</p>
+        <p class="card-text">Para acceder a estas funcionalidades es necesario tener previamente las credenciales provistas por el laboratorio.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Log In
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <h5 class="card-title"> GET: 200.127.215.37/auth/login </h5>
+        <p class="card-text">  En el header se debe enviar una etiqueta con los datos suministrados: Authorization: Bearer base64_encoded(usuario:contrasena). En el header de la respuesta, se devolverá un token con la etiqueta Authorization. El mismo, debe enviarse en todos los llamados siguientes.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Confirmación de Recepción de Ingreso de Mercadería
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        TBD
+      </div>
+    </div>
+  </div>
+</div>    
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+    </body>
+
+</html>
