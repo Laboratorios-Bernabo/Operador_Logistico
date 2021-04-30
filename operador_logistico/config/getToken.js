@@ -5,13 +5,13 @@ const pass = 'pNqdMN4nZJHqeJ!!';
 const bcrypt = require('bcryptjs');
 const model = require('../config/model');
 const path = require('path');
-const { response } = require('../app');
+//const { response } = require('../app');
 
 
 const dbToken = path.join(__dirname, '../data/token.json');
 const controller = {
 
-    connect: async function (req, res) {
+    connect: async function () {
         
         const config = {
             method: 'get',
@@ -19,9 +19,10 @@ const controller = {
             headers: { 'Authorization': `Basic ${btoa(usr + ':' + pass)}` }
         }
 
-        response = await axios(config);
-        model.create({id: m.genId(dbToken), token: response.headers["x-authorization-token"]}, dbToken);
-       return res.json(response.headers["x-authorization-token"]);
+        const resp = await axios(config);
+       // console.log(resp.headers['x-authorization-token']);
+       // model.create({id: model.genId(dbToken), token: response.headers["x-authorization-token"]}, dbToken);
+       return resp.headers['x-authorization-token'];
     }
 }
 
