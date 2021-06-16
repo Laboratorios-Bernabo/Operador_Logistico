@@ -3,7 +3,6 @@ const btoa = require('btoa');
 const usr = 'bernabo_ws';
 const pass = 'pNqdMN4nZJHqeJ!!';
 const bcrypt = require('bcryptjs');
-const model = require('../config/model');
 const path = require('path');
 //const { response } = require('../app');
 

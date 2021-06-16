@@ -3,14 +3,14 @@ const btoa = require('btoa');
 const usr = 'bernabo_ws';
 const pass = 'pNqdMN4nZJHqeJ!!';
 const bcrypt = require('bcryptjs');
-const model = require('../config/model');
-const int_124 = require('../services/124SalesOrder');
+const int124 = require('../services/124SalesOrder');
 const tokenController = require('../config/getToken');
 const controller = {
 
     prepararPedido: async function (req, res) {
-        let resp = int_124.crearPedido(req.body._data_, queryParam);
-        return res.json(resp.data);
+        var resp = await int124.crearPedido(req.body, req.params.id);
+        console.log(resp);
+        return res.json(resp);
     },
 
     getStock: async function (req, res) {
