@@ -14,9 +14,8 @@ const controller = {
 
         var resp = await int124.crearPedido(req.body, req.params.id);
         
-        res.setHeader('content-type', 'application/json; charset=UTF-8');
-        res.setHeader('accept', 'application/json');
-        return res.send(resp);
+        
+        res.status(200).send(resp);
     },
 
     getStock: async function (req, res) {
