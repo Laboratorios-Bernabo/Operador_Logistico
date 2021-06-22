@@ -9,8 +9,7 @@ const controller = {
 
     prepararPedido: async function (req, res) {
         var resp = await int124.crearPedido(req.body, req.params.id);
-        console.log(resp);
-
+        console.log(req.body);
         res.setHeader('content-type', 'application/json; charset=UTF-8');
         res.setHeader('accept', 'application/json');
         return res.send(resp);
