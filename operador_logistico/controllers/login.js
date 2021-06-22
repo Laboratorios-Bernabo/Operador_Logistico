@@ -27,7 +27,7 @@ const controller = {
         // Create the token
         const token = jwt.sign({ sub: user }, config.secret, { expiresIn: '7d' });
 
-        res.setHeader('token', token);
+        res.setHeader('authorization', token);
         return res.status(200).send({ auth: true, message: 'Access ok' });
 
         }else{
