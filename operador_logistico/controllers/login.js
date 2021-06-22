@@ -5,7 +5,7 @@ const user = "Andreani_QA";
 const pass = "XKRe16";
 const config = require('../config.json');
 const jwt = require('jsonwebtoken');
-
+const secret = require('crypto').randomBytes(64).toString('hex');
 const controller = {
 
     validateToken:  (req, res) =>{
