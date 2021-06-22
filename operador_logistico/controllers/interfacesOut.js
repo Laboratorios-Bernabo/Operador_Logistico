@@ -13,7 +13,7 @@ const controller = {
 
         res.setHeader('content-type', 'application/json; charset=UTF-8');
         res.setHeader('accept', 'application/json');
-        return res.json(resp);
+        return res.send(resp);
     },
 
     getStock: async function (req, res) {
