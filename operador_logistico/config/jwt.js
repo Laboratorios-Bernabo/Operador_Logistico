@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports = jwt;
 
 const unprotected = [
-        pathToRegexp('/out/124*'),
+        /* pathToRegexp('/out/124*'), */
         '/auth/login',
         '/auth/access',
         '/documentation',
