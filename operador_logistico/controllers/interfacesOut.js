@@ -9,6 +9,27 @@ const controller = {
 
     prepararPedido: async function (req, res) {
 
+        req.body.pedido = {
+            propietario: "BERNABO SA",
+            tipo: "test",
+            detalles: [
+                {
+                    "articulo": {
+                        "codigo": "0194O",
+                        "lote": {
+                            "idLote": "",
+                            "LoteDeFabricante": "",
+                            "FechaDeVencimiento": ""
+                        }
+                    },
+                    "unidadMedida": "EA",
+                    "lineaExterna": "1",
+                    "unidades": 1
+                }
+            ]
+
+        }
+
         console.log("body del 124");
         console.log(req.body);
 
