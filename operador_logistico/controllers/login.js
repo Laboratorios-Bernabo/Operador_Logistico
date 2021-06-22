@@ -25,9 +25,9 @@ const controller = {
         let dbUser = btoa(user + ':' + pass);
         if (credentials == dbUser ){
         // Create the token Bearer
-        // const token = jwt.sign({ sub: user }, config.secret, { expiresIn: '7d' });
+        const token = jwt.sign({ sub: user }, config.secret, { expiresIn: '7d' });
         // Create the token Basic
-            const token = jwt.sign(user, config.secret, { expiresIn: '7d' });
+           // const token = jwt.sign(user, config.secret, { expiresIn: '7d' });
             res.setHeader('authorization', token);
             return res.status(200).send({ auth: true, message: 'Access ok' });
 
