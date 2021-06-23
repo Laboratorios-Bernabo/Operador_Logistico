@@ -21,8 +21,7 @@ const controller = {
         var url = `https://apisqa.andreani.com/almacenes/v1/${_query_param_}/pedidos`;
         
         const headers = {
-            'x-authorization-token':token,
-            accept: 'application/json'
+            'x-authorization-token':token
         };
 
         var resp = await axios.post(url,_data_, {headers: headers} );
@@ -32,7 +31,7 @@ const controller = {
             logError(error);
             console.log('imprimo error dentro del catch');
             console.log(error);
-            return(error);
+            return(error.response.data.title);
         }
         
     }
