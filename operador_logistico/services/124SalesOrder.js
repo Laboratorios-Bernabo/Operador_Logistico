@@ -29,7 +29,7 @@ const controller = {
 
         }catch(error){
             logError(error);
-            return(error);
+            return(error.data.title);
         }
         
     }
