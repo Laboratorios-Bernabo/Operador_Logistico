@@ -5,9 +5,11 @@ const tokenController = require('../config/getToken');
 function logError(message){
     var today = new Date()
     var todayFormatted = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    console.log("=>Error al procesar interfaz");
-    console.log("==>Fecha: " + todayFormatted);
+    console.error("===================================");
+    console.error("=>Error al procesar interfaz");
+    console.error("==>Fecha: " + todayFormatted);
     console.error(message);
+    console.error("===================================");
 }
 
 const controller = {
@@ -24,7 +26,7 @@ const controller = {
 
         var resp = await axios.post(url,_data_, {headers: headers} );
         return resp.data;
-        
+
         }catch(error){
             logError(error);
             return(error);
