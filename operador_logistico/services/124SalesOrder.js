@@ -2,8 +2,18 @@ const axios = require('axios');
 const { json } = require('express');
 const tokenController = require('../config/getToken');
 
+function logError(message){
+    var today = new Date()
+    var todayFormatted = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    console.log("=>Error al procesar interfaz");
+    console.log("==>Fecha: " + todayFormatted);
+    console.error(message);
+}
+
 const controller = {
     crearPedido: async (_data_, _query_param_) => {
+        var resp = "empty value"
+        try{
         var token = await tokenController.connect();
         
         var url = `https://apisqa.andreani.com/almacenes/v1/${_query_param_}/pedidos`;
@@ -12,12 +22,14 @@ const controller = {
             'x-authorization-token':token
         };
 
-       
-
         var resp = await axios.post(url,_data_, {headers: headers} );
-        
         return resp.data;
-
+        
+        }catch(error){
+            logError(error);
+            return(error);
+        }
+        
     }
 };
 

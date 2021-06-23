@@ -43,7 +43,7 @@ const controller = {
 
         var token = await tokenController.connect();
     
-       /* return res.json(response.headers["x-authorization-token"]); */
+        
         
        const config = {
         method: 'get',
