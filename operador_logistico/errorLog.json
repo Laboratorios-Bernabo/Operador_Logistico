@@ -257,7 +257,7 @@
       _headerSent: true,
       socket: [TLSSocket],
       _header: 'POST /almacenes/v1/wmwhse4/pedidos HTTP/1.1\r\n' +
-        'Accept: application/json, text/plain, */*\r\n' +
+        'Accept: application/json, text/plain, n' +
         'Content-Type: application/json;charset=utf-8\r\n' +
         'x-authorization-token: eyJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwiYWxnIjoiZGlyIiwiY3R5IjoiSldUIn0..jzZ8JhuLN2JTJtwwuMurzw.BfL1kN8cTsbZP9kPwx3z5J4SSdNS3eAOFx3h0I0x-N3em43uw7U2rajQHlFnWN11l7fR3Zs6mks9b4PAZBYu4JI5KKhBtqV8YkQ-sg392yWy-3iP3QwLJYSjijpwifJdMqjTclJyR7HkmedxPx-oj_4HqEgvKEL9hSNq0p36cQcNyTaEsVUO0fPXB4tkMOtnV_1xlaOg8FipMYcWKfKV50Zf25OYuXCQXu0Mi_lkqfTYRZcitjq0a8VTbfwV19P6zDwDoXDOAH9Jcc3Z8Lbd7NP26ra7Law-Ou4cWoa7AyCNBaUZRo2KDN_HwxU50zfwitb-Xq0viJI94KlgGK_LWsv8UNnt2n_UBtSIFoTLZXiQtBAnqp2BVaXod1GBtl2RDwjDvOH4P1Yqf3x-E-B0hXkM65DI0Wmk1_lPVdRdHaa65S598qdVB8VewUE-Oa8iMueifVW2kT8_2HbUxM_1SLrtbDBgyyhATk4u_FfhlJlBOVtNBBWJzuRK_-LChMD9vxoX_b1DZwuIt4eIHwFjd9s6T1uUr0Qb5V76FBUCNZS9hHIaL96yxUNgL3MYSpCU8g2cmDl9SJdojH2c5IXQ4paIyxJOl6L1TPiX6pkBgxJJot12Genk6Pz3w4KiQoi2epY-cTPsPYFu8qatB8yJz3wEfq5koiQroPPHUBOje6c0qIJp5FWC-US89WN3-5SuL4DSgwZJOmGcM2yas3KMunAmYNSGATqEZX5G43k_xdiQrdjkFOYdqgfUZqbLeT0Z_MjZlHAHrFwJfpDs8c6jJUqrKqlLgCJKKGbPNtwtZ-sT8vqXshohYEBGE1yMFnDs1syjTvfz2dTw4Fbbpm9n5l1D0Qd4BmwPBxnK9Fig7Iu3YJbMlqgN9zjTLkZtOF3SV50ynLxwV3JZtHRH2pP5_geSXgITJvw2TyiNPzlRM6W8rMrGVCgYuWFNq8qRUaU-.lZE5FpXvgC8zyor4nI7g59k5m--wjGGTBMdt4q9IIWg\r\n' +
         'User-Agent: axios/0.21.1\r\n' +

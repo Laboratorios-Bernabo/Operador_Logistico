@@ -9,7 +9,7 @@ const controller = {
 
     prepararPedido: async function (req, res) {
 
-        req.body.pedido = {
+/*         req.body.pedido = {
             propietario: "BERNABO SA",
             tipo: "test",
             detalles: [
@@ -29,7 +29,7 @@ const controller = {
             ]
 
         }
-
+ */
         console.log("body del 124");
         console.log(req.body);
 
