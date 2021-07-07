@@ -6,7 +6,12 @@ const bcrypt = require('bcryptjs');
 const int124 = require('../services/124SalesOrder');
 const tokenController = require('../config/getToken');
 const controller = {
-
+    callInterface: async function (req, res){
+        console.log("imprimo el body:");
+        console.log(req.body);
+        
+        return res.json({message: "ok"});
+    },
     prepararPedido: async function (req, res) {
 
 /*         req.body.pedido = {
