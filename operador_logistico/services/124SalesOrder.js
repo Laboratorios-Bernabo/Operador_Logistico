@@ -13,6 +13,9 @@ function logError(message){
 }
 
 const controller = {
+    consultarPedido: async (_data_, _query_url_) => {
+        console.log("completar");
+    },
     crearPedido: async (_data_, _query_param_) => {
         var resp = "empty value"
         try{

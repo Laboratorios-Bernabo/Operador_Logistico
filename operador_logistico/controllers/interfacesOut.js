@@ -10,33 +10,17 @@ const controller = {
         console.log("imprimo el body:");
         console.log(req.body);
         
-        return res.json({message: "ok"});
+        var theUrl = `https://apisqa.andreani.com/almacenes/v1/${req.body.idalmacen}/pedidos/${req.params.id}`;
+
+        console.log("imprimo la url");
+        console.log(theUrl);
+
+        var resp = await axios.get(theUrl);
+
+        res.status(200).send(resp.data);
+       
     },
     prepararPedido: async function (req, res) {
-
-/*         req.body.pedido = {
-            propietario: "BERNABO SA",
-            tipo: "test",
-            detalles: [
-                {
-                    "articulo": {
-                        "codigo": "0194O",
-                        "lote": {
-                            "idLote": "",
-                            "LoteDeFabricante": "",
-                            "FechaDeVencimiento": ""
-                        }
-                    },
-                    "unidadMedida": "EA",
-                    "lineaExterna": "1",
-                    "unidades": 1
-                }
-            ]
-
-        }
- */
-        console.log("body del 124");
-        console.log(req.body);
 
         var resp = await int124.crearPedido(req.body, req.params.id);
         
