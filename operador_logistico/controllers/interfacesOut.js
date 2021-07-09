@@ -10,7 +10,7 @@ const controller = {
         console.log("imprimo el body:");
         console.log(req.body);
         
-        var theUrl = `https://apisqa.andreani.com/almacenes/v1/${req.body.idalmacen}/pedidos/${req.params.id}`;
+        var theUrl = `https://apisqa.andreani.com/almacenes/v1/${req.body.idalmacen}/pedidos/${req.body.idtx}`;
 
         console.log("imprimo la url");
         console.log(theUrl);
