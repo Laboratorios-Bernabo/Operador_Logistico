@@ -17,7 +17,7 @@ const controller = {
 
         var resp = await axios.get(theUrl);
 
-        res.status(200).send(resp.data);
+        res.status(200).send(resp.data.estado);
        
     },
     prepararPedido: async function (req, res) {
