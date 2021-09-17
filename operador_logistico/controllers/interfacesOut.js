@@ -6,6 +6,24 @@ const bcrypt = require('bcryptjs');
 const int124 = require('../services/124SalesOrder');
 const tokenController = require('../config/getToken');
 const controller = {
+
+    getTxState: async function (req, res){
+
+        console.log("imprimo el body:");
+        console.log(req.body);
+
+        var theUrl = `https://apisqa.andreani.com/almacenes/v1/${req.body.idalmacen}/pedidos/${req.body.txid}`;
+
+        console.log("imprimo la url");
+        console.log(theUrl);
+
+        var resp = await axios.get(theUrl);
+
+        res.status(200).send(resp.data.estado);
+
+    },
+    
+
     callInterface: async function (req, res){
         console.log(req.body.address);
         if (req.body.address) {
