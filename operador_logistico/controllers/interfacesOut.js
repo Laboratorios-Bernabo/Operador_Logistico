@@ -28,8 +28,13 @@ const controller = {
         console.log(req.body.address);
         if (req.body.address) {
             var theUrl = req.body.address;
+            var dataPost = req.body.bodydata;
+            if (dataPost){
+                var resp = await axios.post(theUrl, dataPost);
+            }else{
             var resp = await axios.get(theUrl);
-            res.status(200).send(resp.data.estado);
+            }
+            return res.status(200).send(resp.data);
         }else{
             return res.status(404).send("URL No encontrada. enviar correo a soporte@laboratoriosbernabo.com")
         }  
