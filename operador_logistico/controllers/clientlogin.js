@@ -1,7 +1,7 @@
 const axios = require('axios');
 const btoa = require('btoa');
-const usr = 'bernabo_ws';
-const pass = 'pNqdMN4nZJHqeJ!!';
+const usr = 'YYY';
+const pass = 'XXX';
 const bcrypt = require('bcryptjs');
 const path = require('path');
 const { response } = require('../app');
